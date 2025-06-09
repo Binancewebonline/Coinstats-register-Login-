@@ -1,3 +1,25 @@
+# Repository: coinstats-register-Login
+# GitHub username: Binancewebonline
+# Contact email: coinstatssystem@outlook.com
+
+# CoinStats Account IDs and Redirection Links (for reference in code)
+/*
+Account 01: USER ID = 6ZMCaw6MoUJe19M
+Redirection link: https://coinstats.app/p/6ZMCaw6MoUJe19M
+
+Account 02: USER ID = MnWIlxup31WTwie
+Redirection link: https://coinstats.app/p/MnWIlxup31WTwie
+
+Account 03: USER ID = AODn1d7anqTWlQG
+Redirection link: https://coinstats.app/p/AODn1d7anqTWlQG
+
+Account 04: USER ID = YlaLJkOhuai4nAx
+Redirection link: https://coinstats.app/p/YlaLJkOhuai4nAx
+
+Account 05: USER ID = UpnvcxwHNgeZRld
+Redirection link: https://coinstats.app/p/UpnvcxwHNgeZRld
+*/
+
 # Dependency directories
 /node_modules/
 
