@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>CoinStats Register/Login</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container" id="registerContainer">
+    <h2>Register</h2>
+    <input type="text" id="regUsername" placeholder="Enter username" required />
+    <input type="password" id="regPassword" placeholder="Enter password" required />
+    <button onclick="register()">Register</button>
+  </div>
+
+  <div class="container" id="loginContainer" style="display:none;">
+    <h2>Login</h2>
+    <input type="text" id="loginUsername" placeholder="Enter username" required />
+    <input type="password" id="loginPassword" placeholder="Enter password" required />
+    <button onclick="login()">Login</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
