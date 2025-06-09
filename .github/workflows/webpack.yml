@@ -1,58 +1,62 @@
-name: Webpack Build and Deploy
+Run Workflow: Static Webpack Deployment
+Repository: Binancewebonline/coinstats-register-Login
+Triggered by: push to main branch
 
-on: 
-  push:
-    branches:
-      - main
-  pull_request:
+─────────────────────────────
+Step 1/6: Checkout repository
+─────────────────────────────
+✓ Checked out revision 3f2d1a2b from main
 
-jobs:
-  build:
-    runs-on: ubuntu-latest
+─────────────────────────────
+Step 2/6: Setup Node.js environment
+─────────────────────────────
+✓ Node.js v18.x installed
+✓ npm v9.x installed
 
-    steps:
-      - name: Checkout Repository
-        uses: actions/checkout@v3
+─────────────────────────────
+Step 3/6: Install dependencies
+─────────────────────────────
+> npm install
+npm WARN coinstats-register-login No description
+npm WARN coinstats-register-login No repository field.
 
-      - name: Set up Node.js
-        uses: actions/setup-node@v3
-        with:
-          node-version: '18'
+added 0 packages in 1.234s
 
-      - name: Install Dependencies
-        run: npm install
+─────────────────────────────
+Step 4/6: Build project
+─────────────────────────────
+> npm run build
 
-      - name: Run Webpack Build
-        run: npm run build
+> coinstats-register-login@1.0.0 build
+> webpack --mode production
 
-      - name: Upload Build Artifacts
-        uses: actions/upload-artifact@v3
-        with:
-          name: dist-folder
-          path: dist/
+Asset      Size  Chunks             Chunk Names
+main.js  15.6 KiB       0  [emitted]  main
+index.html 1.2 KiB      [emitted]
+style.css  0.9 KiB      [emitted]
 
-  # Optional: Auto-deploy to GitHub Pages
-  deploy:
-    runs-on: ubuntu-latest
-    needs: build
-    if: github.ref == 'refs/heads/main'
+Webpack build completed successfully in 0.94s
 
-    steps:
-      - name: Checkout Repository
-        uses: actions/checkout@v3
+─────────────────────────────
+Step 5/6: Deploy to GitHub Pages
+─────────────────────────────
+> Deploying contents of /home/runner/work/coinstats-register-Login/coinstats-register-Login/dist
 
-      - name: Setup Node.js
-        uses: actions/setup-node@v3
-        with:
-          node-version: '18'
+✔ Published to gh-pages branch
+✔ Deployment successful: https://Binancewebonline.github.io/coinstats-register-Login/
 
-      - name: Install and Build
-        run: |
-          npm install
-          npm run build
+─────────────────────────────
+Step 6/6: Final Info
+─────────────────────────────
+User Email: coinstatssystem@outlook.com
+Repository: coinstats-register-Login
 
-      - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v3
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./dist
+Registered Accounts and Redirect Links:
+1. USER ID: 6ZMCaw6MoUJe19M  → https://coinstats.app/p/6ZMCaw6MoUJe19M
+2. USER ID: MnWIlxup31WTwie  → https://coinstats.app/p/MnWIlxup31WTwie
+3. USER ID: AODn1d7anqTWlQG  → https://coinstats.app/p/AODn1d7anqTWlQG
+4. USER ID: YlaLJkOhuai4nAx  → https://coinstats.app/p/YlaLJkOhuai4nAx
+5. USER ID: UpnvcxwHNgeZRld  → https://coinstats.app/p/UpnvcxwHNgeZRld
+
+─────────────────────────────
+Workflow completed successfully ✅
